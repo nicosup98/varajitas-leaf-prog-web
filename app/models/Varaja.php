@@ -1,10 +1,13 @@
-<?
+<?php
 
-use App\Models\Model;
+namespace App\Models;
 
-class Varaja extends Model {
 
-   protected array $fillable = ["nombre", "tipo", "imagen"];
 
+class Varaja extends Model
+{
+
+
+   protected $fillable = ["nombre", "tipo", "imagen"];
+   public $timestamps = false;
 }
-

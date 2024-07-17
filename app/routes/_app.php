@@ -8,3 +8,4 @@ app()->get('/', function () {
 
 app()->get("/varaja/{type}", "VarajaController@createVaraja");
 
+

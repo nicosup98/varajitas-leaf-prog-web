@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Models;
 use App\Controllers\Controller;
 
 class Album extends Controller {

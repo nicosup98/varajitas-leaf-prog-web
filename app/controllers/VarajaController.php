@@ -4,18 +4,42 @@ namespace App\Controllers;
 
 use App\Controllers\Controller;
 use Leaf\Fetch;
+use Ramsey\Uuid\Uuid;
 
 class VarajaController extends Controller
 {
 
    public function createVaraja(string $type)
    {
+      db()->autoConnect();
       $data = match ($type) {
          "pokemon" => $this->getRandomPokemon(),
          "pato" => $this->getRandomPato(),
+         "perro" => $this->getRandomPerro()
       };
 
-      response()->json($data);
+      $varaja = db()->select("varajas")->where("imagen",$data["imagen"])->first();
+
+      $errors = db()->errors();
+
+      if($errors){
+         return response()->exit($errors);
+      }
+
+      if(!$varaja) {
+         db()->insert("varajas")->params($data)->execute();
+         $varaja = db()->select("varajas")->where("id",db()->lastInsertId())->first();
+      }
+      
+      $errors = db()->errors();
+
+      if($errors) {
+         return response()->exit($errors);
+      }
+
+      db()->close();
+
+      response()->json($varaja);
    }
 
    private function getRandomPokemon()
@@ -33,10 +57,18 @@ class VarajaController extends Controller
 
    private function getRandomPato()
    {
-      $randomNumber = rand(1,290 + 55); // jpg + gif
+      $randomNumber = rand(1,10000); 
       $res = Fetch::request(["url" => "https://random-d.uk/api/v2/quack"]);
       
       $pato = $res->data;
       return ["nombre" => "pato $randomNumber", "imagen" => $pato->url, "tipo" => "pato"];
+   }
+
+   private function getRandomPerro(){
+      $randomId = Uuid::uuid4()->toString(); 
+      $res = Fetch::request(["url" => "https://dog.ceo/api/breeds/image/random"]);
+      
+      $perro = $res->data;
+      return ["nombre" => "perro $randomId", "imagen" => $perro->message, "tipo" => "perro"];
    }
 }

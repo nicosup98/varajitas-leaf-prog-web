@@ -5,6 +5,7 @@ esta funcional pero faltan mas tipos de varajas
 ## rutas
 - /login
 - /singup
+
 funciona con JWT para la sesion
 ### generar cartas
 - [x] /varaja/gen/pokemon

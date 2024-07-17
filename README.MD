@@ -5,7 +5,8 @@ todavia no guarda los registros pero devuelve pokemones y patos aleatorios
 ## rutas
 - [x] /varaja/pokemon
 - [x] /varaja/pato
-- [ ] /varaja/perro
+- [x] /varaja/perro
+
 ...
 
 > el response de las varajas sera igual en todas

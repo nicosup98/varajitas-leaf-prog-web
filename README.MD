@@ -7,7 +7,7 @@ todavia no guarda los registros pero devuelve pokemones y patos aleatorios
 - [x] /varaja/pato
 - [x] /varaja/perro
 
-...
+esta funcional pero faltan mas tipos de varajas
 
 > el response de las varajas sera igual en todas
 

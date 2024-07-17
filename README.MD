@@ -3,9 +3,16 @@
 todavia no guarda los registros pero devuelve pokemones y patos aleatorios
 
 ## rutas
-- [x] /varaja/pokemon
-- [x] /varaja/pato
-- [x] /varaja/perro
+- /login
+- /singup
+### generar cartas
+- [x] /varaja/gen/pokemon
+- [x] /varaja/gen/pato
+- [x] /varaja/gen/perro
+
+### consultar cartas de usuario
+- [x] /varajas/user
+
 
 esta funcional pero faltan mas tipos de varajas
 

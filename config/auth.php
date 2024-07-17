@@ -33,7 +33,7 @@ return [
     | and update methods
     |
     */
-    'USE_TIMESTAMPS' => true,
+    'USE_TIMESTAMPS' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -85,7 +85,7 @@ return [
     | Hide id field from user object returned in login, register and update
     |
     */
-    'HIDE_ID' => true,
+    'HIDE_ID' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -164,7 +164,7 @@ return [
     | Add an auth token to the auth session?
     |
     */
-    'SAVE_SESSION_JWT' => false,
+    'SAVE_SESSION_JWT' => true,
 
     /*
     |--------------------------------------------------------------------------

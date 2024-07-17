@@ -3,7 +3,7 @@
     "username?": "mychi.darko",
     "fullname": "Mychi Darko",
     "email": "mickdd22@gmail.com",
-    "email_verified_at?": "2021-07-23T16:18:35.947712157Z",
+    "verified?": true,
     "password": "poekojdenwjwiojweojojweoijoewoj",
     "remember_token?": "deiwoj",
     "timestamps": ""

@@ -12,6 +12,7 @@ class User extends Model
         'fullname', 'email', 'password',
     ];
 
+    protected $attributes = ["verified" => false];
     /**
      * The attributes that should be hidden for serialization.
      * @var array
@@ -26,11 +27,4 @@ class User extends Model
      */
     public $timestamps = true;
 
-    /**
-     * The attributes that should be cast to native types.
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
 }

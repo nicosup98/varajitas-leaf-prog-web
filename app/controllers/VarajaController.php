@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\Controller;
+use App\Models\Album;
 use Leaf\Fetch;
 use Ramsey\Uuid\Uuid;
 
@@ -18,24 +19,39 @@ class VarajaController extends Controller
          "perro" => $this->getRandomPerro()
       };
 
-      $varaja = db()->select("varajas")->where("imagen",$data["imagen"])->first();
+      $varaja = db()->select("varajas")->where("imagen", $data["imagen"])->first();
 
       $errors = db()->errors();
 
-      if($errors){
+      if ($errors) {
          return response()->exit($errors);
       }
 
-      if(!$varaja) {
+      if (!$varaja) {
          db()->insert("varajas")->params($data)->execute();
-         $varaja = db()->select("varajas")->where("id",db()->lastInsertId())->first();
+         $varaja = db()->select("varajas")->where("id", db()->lastInsertId())->assoc();
       }
-      
+
       $errors = db()->errors();
 
-      if($errors) {
+      if ($errors) {
          return response()->exit($errors);
       }
+
+      $id_user = auth()->id();
+
+      $album = new Album();
+
+      $haveCard = db()->select("albums")->where(["id_usuario" => $id_user, "id_varaja" => $varaja["id"]])->first();
+
+      if (!$haveCard) {
+         $album->id_usuario = $id_user;
+         $album->id_varaja = $varaja["id"];
+
+         $album->save();
+      }
+
+
 
       db()->close();
 
@@ -51,23 +67,24 @@ class VarajaController extends Controller
       $pokemon = $res->data;
 
 
-      
-      return ["nombre"=> $pokemon->name, "imagen" => $pokemon->sprites->front_default, "tipo"=>"pokemon"];
+
+      return ["nombre" => $pokemon->name, "imagen" => $pokemon->sprites->front_default, "tipo" => "pokemon"];
    }
 
    private function getRandomPato()
    {
-      $randomNumber = rand(1,10000); 
+      $randomNumber = rand(1, 10000);
       $res = Fetch::request(["url" => "https://random-d.uk/api/v2/quack"]);
-      
+
       $pato = $res->data;
       return ["nombre" => "pato $randomNumber", "imagen" => $pato->url, "tipo" => "pato"];
    }
 
-   private function getRandomPerro(){
-      $randomId = Uuid::uuid4()->toString(); 
+   private function getRandomPerro()
+   {
+      $randomId = Uuid::uuid4()->toString();
       $res = Fetch::request(["url" => "https://dog.ceo/api/breeds/image/random"]);
-      
+
       $perro = $res->data;
       return ["nombre" => "perro $randomId", "imagen" => $perro->message, "tipo" => "perro"];
    }

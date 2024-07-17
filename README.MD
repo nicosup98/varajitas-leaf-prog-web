@@ -1,19 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the application up and running.
+todavia no guarda los registros pero devuelve pokemones y patos aleatorios
 
-Things you may want to cover:
+## rutas
+- [x] /varaja/pokemon
+- [x] /varaja/pato
+- [ ] /varaja/perro
+...
 
-## App Info
+> el response de las varajas sera igual en todas
 
-## Installation
-
-## System dependencies
-
-## Configuration
-
-## Database creation
-
-## Database initialization
-
-## Deployment instructions
+```json
+{
+"id":1,
+"nombre":  "dito",
+"imagen"  :  "url de la imagen",
+"tipo":  "pokemon"
+}
+```

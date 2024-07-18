@@ -28,6 +28,8 @@ RUN apt-get purge -y g++ \
 
 WORKDIR /var/www
 
+expose 5500
+
 RUN chown -R www-data:www-data /var/www
 
 CMD ["apache2-foreground"]

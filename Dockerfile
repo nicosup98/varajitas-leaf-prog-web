@@ -2,6 +2,7 @@ FROM php:8.2-apache
 
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
+
 RUN a2enmod rewrite
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -27,6 +28,7 @@ RUN apt-get purge -y g++ \
     && rm -rf /tmp/*
 
 WORKDIR /var/www
+COPY . ./
 
 expose 5500
 

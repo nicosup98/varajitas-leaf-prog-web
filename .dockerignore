@@ -1,0 +1,233 @@
+# flyctl launch added from .gitignore
+**/.env
+**/.env.backup
+**/.env.production
+**/build
+**/dist
+**/compiled
+**/.idea
+**/hot
+**/vendor
+**/node_modules
+**/npm-debug.log
+**/yarn-error.log
+
+# flyctl launch added from app/database/.gitignore
+app/database/**/*.sqlite
+app/database/**/*.sqlite-journal
+
+# flyctl launch added from storage/app/public/.gitignore
+storage/app/public/**/*
+!storage/app/public/**/.gitignore
+
+# flyctl launch added from storage/framework/views/.gitignore
+storage/framework/views/**/*
+!storage/framework/views/**/.gitignore
+
+# flyctl launch added from storage/logs/.gitignore
+storage/logs/**/*
+!storage/logs/**/.gitignore
+
+# flyctl launch added from vendor/leafs/aloe/.gitignore
+vendor/leafs/aloe/**/test
+vendor/leafs/aloe/**/vendor
+vendor/leafs/aloe/**/composer.lock
+vendor/leafs/aloe/**/AloeUninstallCommand.php
+
+# flyctl launch added from vendor/leafs/anchor/.gitignore
+# Global
+vendor/leafs/anchor/**/.phpunit*
+vendor/leafs/anchor/**/.composer
+vendor/leafs/anchor/**/composer.lock
+vendor/leafs/anchor/**/package-lock.json
+vendor/leafs/anchor/**/vendor
+vendor/leafs/anchor/**/test
+
+# OS Generated
+vendor/leafs/anchor/**/.DS_Store*
+vendor/leafs/anchor/**/ehthumbs.db
+vendor/leafs/anchor/**/Icon?
+vendor/leafs/anchor/**/Thumbs.db
+vendor/leafs/anchor/**/*.swp
+
+# phpstorm
+vendor/leafs/anchor/**/.idea/*
+
+# flyctl launch added from vendor/leafs/auth/.gitignore
+# Global
+vendor/leafs/auth/**/.phpunit*
+vendor/leafs/auth/**/.composer
+vendor/leafs/auth/**/composer.lock
+vendor/leafs/auth/**/package-lock.json
+vendor/leafs/auth/**/vendor
+vendor/leafs/auth/**/test
+vendor/leafs/auth/**/*.tests.php
+vendor/leafs/auth/**/workflows
+!vendor/leafs/auth/**/.github/workflows
+
+# OS Generated
+vendor/leafs/auth/**/.DS_Store*
+vendor/leafs/auth/**/ehthumbs.db
+vendor/leafs/auth/**/Icon?
+vendor/leafs/auth/**/Thumbs.db
+vendor/leafs/auth/**/*.swp
+
+# phpstorm
+vendor/leafs/auth/**/.idea/*
+
+# flyctl launch added from vendor/leafs/cors/.gitignore
+vendor/leafs/cors/**/test
+vendor/leafs/cors/**/Experimental
+vendor/leafs/cors/**/vendor
+vendor/leafs/cors/**/composer.lock
+
+# flyctl launch added from vendor/leafs/date/.gitignore
+# Global
+vendor/leafs/date/**/.phpunit*
+vendor/leafs/date/**/.php-cs-fixer.cache
+vendor/leafs/date/**/.composer
+vendor/leafs/date/**/composer.lock
+vendor/leafs/date/**/package-lock.json
+vendor/leafs/date/**/vendor
+vendor/leafs/date/**/test
+
+# OS Generated
+vendor/leafs/date/**/.DS_Store*
+vendor/leafs/date/**/ehthumbs.db
+vendor/leafs/date/**/Icon?
+vendor/leafs/date/**/Thumbs.db
+vendor/leafs/date/**/*.swp
+
+# phpstorm
+vendor/leafs/date/**/.idea/*
+
+# flyctl launch added from vendor/leafs/db/.gitignore
+# Global
+vendor/leafs/db/**/.phpunit*
+vendor/leafs/db/**/.php-cs-fixer.cache
+vendor/leafs/db/**/.composer
+vendor/leafs/db/**/composer.lock
+vendor/leafs/db/**/package-lock.json
+vendor/leafs/db/**/vendor
+vendor/leafs/db/**/test
+
+# OS Generated
+vendor/leafs/db/**/.DS_Store*
+vendor/leafs/db/**/ehthumbs.db
+vendor/leafs/db/**/Icon?
+vendor/leafs/db/**/Thumbs.db
+vendor/leafs/db/**/*.swp
+
+# phpstorm
+vendor/leafs/db/**/.idea/*
+
+# flyctl launch added from vendor/leafs/fetch/.gitignore
+vendor/leafs/fetch/**/test
+vendor/leafs/fetch/**/Experimental
+vendor/leafs/fetch/**/vendor
+vendor/leafs/fetch/**/composer.lock
+
+# flyctl launch added from vendor/leafs/form/.gitignore
+vendor/leafs/form/**/test
+vendor/leafs/form/**/Experimental
+vendor/leafs/form/**/vendor
+vendor/leafs/form/**/composer.lock
+vendor/leafs/form/**/composer
+vendor/leafs/form/**/.phpunit.result.cache
+vendor/leafs/form/**/.php-cs-fixer.cache
+
+#phpstorm
+vendor/leafs/form/**/.idea
+
+# flyctl launch added from vendor/leafs/fs/.gitignore
+vendor/leafs/fs/**/.phpunit*
+vendor/leafs/fs/**/test
+vendor/leafs/fs/**/Experimental
+vendor/leafs/fs/**/vendor
+vendor/leafs/fs/**/composer.lock
+
+# flyctl launch added from vendor/leafs/http/.gitignore
+# Global
+vendor/leafs/http/**/.phpunit*
+vendor/leafs/http/**/.composer
+vendor/leafs/http/**/composer.lock
+vendor/leafs/http/**/package-lock.json
+vendor/leafs/http/**/.phpunit.result.cache
+vendor/leafs/http/**/.php-cs-fixer.cache
+vendor/leafs/http/**/vendor
+vendor/leafs/http/**/test
+
+# OS Generated
+vendor/leafs/http/**/.DS_Store*
+vendor/leafs/http/**/ehthumbs.db
+vendor/leafs/http/**/Icon?
+vendor/leafs/http/**/Thumbs.db
+vendor/leafs/http/**/*.swp
+
+# phpstorm
+vendor/leafs/http/**/.idea/*
+
+# flyctl launch added from vendor/leafs/logger/.gitignore
+vendor/leafs/logger/**/test
+vendor/leafs/logger/**/Experimental
+vendor/leafs/logger/**/vendor
+vendor/leafs/logger/**/composer.lock
+
+# flyctl launch added from vendor/leafs/mvc-core/.gitignore
+vendor/leafs/mvc-core/**/test
+vendor/leafs/mvc-core/**/Experimental
+vendor/leafs/mvc-core/**/vendor
+vendor/leafs/mvc-core/**/composer.lock
+
+# flyctl launch added from vendor/leafs/password/.gitignore
+vendor/leafs/password/**/test
+vendor/leafs/password/**/Experimental
+vendor/leafs/password/**/vendor
+vendor/leafs/password/**/composer.lock
+
+# flyctl launch added from vendor/leafs/router/.gitignore
+# Global
+vendor/leafs/router/**/.phpunit*
+vendor/leafs/router/**/.composer
+vendor/leafs/router/**/composer.lock
+vendor/leafs/router/**/package-lock.json
+vendor/leafs/router/**/vendor
+vendor/leafs/router/**/test
+vendor/leafs/router/**/*.tests.php
+
+# OS Generated
+vendor/leafs/router/**/.DS_Store*
+vendor/leafs/router/**/ehthumbs.db
+vendor/leafs/router/**/Icon?
+vendor/leafs/router/**/Thumbs.db
+vendor/leafs/router/**/*.swp
+
+# phpstorm
+vendor/leafs/router/**/.idea/*
+
+# flyctl launch added from vendor/leafs/session/.gitignore
+# Global
+vendor/leafs/session/**/.phpunit*
+vendor/leafs/session/**/.composer
+vendor/leafs/session/**/composer.lock
+vendor/leafs/session/**/package-lock.json
+vendor/leafs/session/**/.phpunit.result.cache
+vendor/leafs/session/**/.php-cs-fixer.cache
+vendor/leafs/session/**/vendor
+vendor/leafs/session/**/test
+
+# OS Generated
+vendor/leafs/session/**/.DS_Store*
+vendor/leafs/session/**/ehthumbs.db
+vendor/leafs/session/**/Icon?
+vendor/leafs/session/**/Thumbs.db
+vendor/leafs/session/**/*.swp
+
+# phpstorm
+vendor/leafs/session/**/.idea/*
+
+# flyctl launch added from vendor/psr/container/.gitignore
+vendor/psr/container/**/composer.lock
+vendor/psr/container/**/composer.phar
+vendor/psr/container/vendor
+fly.toml

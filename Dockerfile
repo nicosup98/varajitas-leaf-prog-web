@@ -8,4 +8,3 @@ RUN install-php-extensions \
 	intl \
 	zip \
 	opcache \
-    unzip \ 

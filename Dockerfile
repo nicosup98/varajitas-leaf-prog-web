@@ -28,7 +28,6 @@ RUN apt-get purge -y g++ \
 
 WORKDIR /var/www
 
-expose 8080
 
 RUN chown -R www-data:www-data /var/www
 

@@ -1,5 +1,4 @@
 # flyctl launch added from .gitignore
-**/.env
 **/.env.backup
 **/.env.production
 **/build

@@ -35,5 +35,5 @@ RUN chown -R www-data:www-data /var/www
 run composer install --ignore-platform-reqs --no-dev -a
 RUN composer dump-autoload
 
-
+expose 8000
 CMD ["apache2-foreground"]

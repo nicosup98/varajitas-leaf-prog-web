@@ -4,6 +4,6 @@ services:
     build: ./docker
     image: leafphp/docker
     ports:
-      - '4000:80'
+      - '8000:80'
     volumes:
       - .:/var/www

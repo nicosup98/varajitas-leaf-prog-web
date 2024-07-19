@@ -33,5 +33,6 @@ WORKDIR /var/www
 copy . /var/www
 RUN chown -R www-data:www-data /var/www
 RUN composer dump-autoload
+run composer install --ignore-platform-reqs --no-dev -a
 
 CMD ["apache2-foreground"]

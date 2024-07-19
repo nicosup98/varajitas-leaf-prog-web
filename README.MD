@@ -13,7 +13,7 @@ funciona con JWT para la sesion
 - [x] /varaja/gen/perro
 
 ### consultar cartas de usuario
-- [x] /varajas/user
+- [x] /varaja/user
 
 > el response de las varajas sera igual en todas
 

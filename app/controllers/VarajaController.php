@@ -22,6 +22,8 @@ class VarajaController extends Controller
 
       $varaja = db()->select("varajas")->where("imagen", $data["imagen"])->first();
 
+
+
       $errors = db()->errors();
 
       if ($errors) {
@@ -29,6 +31,7 @@ class VarajaController extends Controller
       }
 
       if (!$varaja) {
+         //app()->logger()->debug($data);
          db()->insert("varajas")->params($data)->execute();
          $varaja = db()->select("varajas")->where("id", db()->lastInsertId())->assoc();
       }
@@ -89,13 +92,14 @@ class VarajaController extends Controller
       $perro = $res->data;
       return ["nombre" => "perro $randomId", "imagen" => $perro->message, "tipo" => "perro"];
    }
-   private function getRandomAnime(){
-      $randomId = rand(1,1000);
+   private function getRandomAnime()
+   {
+      $randomId = rand(1, 1000);
 
       $res = Fetch::get("https://api.jikan.moe/v4/anime/$randomId");
       $anime = $res->data;
-      $name = $anime->titles[0]->title;
-      $img = $anime->images->webp->image_url;
-      return ["nombre" => $name, "imagen" => $img, "tipo"=> "anime"];
+      $name = $anime->data->titles[0]->title;
+      $img = $anime->data->images->webp->image_url;
+      return ["nombre" => $name, "imagen" => "$img", "tipo" => "anime"];
    }
 }

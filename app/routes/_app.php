@@ -15,6 +15,7 @@ app()->registerMiddleware('auth', function () {
 app()->group("/varaja", ["middleware" => "auth",function(){
     app()->get("/gen/{type}", "VarajaController@createVaraja");
     app()->get("/user","AlbumController@getVarajasOfUser");
+    app()->get("/user/{type}","AlbumController@getVarajasOfUserByType");
 }]);
 app()->get('/', function () {
     response()->json(['message' => 'Congrats!! You\'re on Leaf API']);

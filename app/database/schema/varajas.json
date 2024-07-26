@@ -2,5 +2,5 @@
    "id":1,
    "nombre": "dito",
    "imagen" : "url de la imagen",
-   "tipo": ["pokemon", "perro", "pato"]
+   "tipo": ["pokemon", "perro", "pato", "anime"]
 }

@@ -17,7 +17,8 @@ class VarajaController extends Controller
          "pokemon" => $this->getRandomPokemon(),
          "pato" => $this->getRandomPato(),
          "perro" => $this->getRandomPerro(),
-         "anime" => $this->getRandomAnime()
+         "anime" => $this->getRandomAnime(),
+         "RYM" => $this->getRandomCharacterRYM()
       };
 
       $varaja = db()->select("varajas")->where("imagen", $data["imagen"])->first();
@@ -101,5 +102,16 @@ class VarajaController extends Controller
       $name = $anime->data->titles[0]->title;
       $img = $anime->data->images->webp->image_url;
       return ["nombre" => $name, "imagen" => "$img", "tipo" => "anime"];
+   }
+
+   private function getRandomCharacterRYM(){
+      $randomId = rand(1,826);
+      $res = Fetch::get("https://rickandmortyapi.com/api/character/$randomId");
+      $character = $res->data;
+      $name = $character->name;
+      $img = $character->image;
+
+      return ["nombre" => $name, "imagen" => $img, "tipo" => "RYM"];
+
    }
 }
